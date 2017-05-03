@@ -1,0 +1,2 @@
+# JavaExercise
+Projecteuler answers 
