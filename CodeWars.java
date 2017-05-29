@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CodeWars {
 
 	public static String printerError(String s) {
@@ -54,6 +56,57 @@ public class CodeWars {
 	 * return vowelsCount;
 	 */
 	
+	//--------------------------------------------------------------------------------
+	
+	public static String makeComplement(String dna) {
+		ArrayList<String> ar=new ArrayList<String>();
+		for (Character c : dna.toCharArray()) {
+			if (c=='A'){
+				ar.add("T");
+			}
+			if (c=='T'){
+				ar.add("A");
+			}
+			if (c=='G'){
+				ar.add("C");
+			}
+			if (c=='C'){
+				ar.add("G");
+			}
+		}
+		return ar.toString().replaceAll("[\\W+]", "");
+		
+	}
+	   /*  1St solution 
+	    dna = dna.replaceAll("A","Z");
+	    dna = dna.replaceAll("T","A");
+	    dna = dna.replaceAll("Z","T");
+	    dna = dna.replaceAll("C","Z");
+	    dna = dna.replaceAll("G","C");
+	    dna = dna.replaceAll("Z","G");
+	    return dna;
+	  }*/
+		
+		/*2Nd solution
+		    char[] chars = dna.toCharArray();
+		    for(int i = 0; i < chars.length; i++) {
+		      chars[i] = getComplement(chars[i]);
+		    }
+		    
+		    return new String(chars);
+		  }
+		  
+		  private static char getComplement(char c) {
+		    switch(c) {
+		      case 'A': return 'T';
+		      case 'T': return 'A';
+		      case 'C': return 'G';
+		      case 'G': return 'C';
+		    }
+		    return c;
+		  }
+		*/
+		
 	//--------------------------------------------------------------------------------
 	
 	public static void main(String[] args) {
