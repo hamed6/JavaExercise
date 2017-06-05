@@ -109,6 +109,26 @@ public class CodeWars {
 		
 	//--------------------------------------------------------------------------------
 	
+	public class CamelCaseMethod {
+	public static String camelCase(final String string) {
+		
+		ArrayList<Character> myAr = new ArrayList<Character>();
+		for (int j = 0; j < string.split(" ").length; j++) {
+			String ss = string.split(" ")[j];
+			for (int i = 0; i < ss.length(); i++) {
+				if (i == 0) {
+					char c = ss.charAt(i);
+//					myAr.add(Character.toUpperCase(c));
+					myAr.add(Character.toUpperCase(ss.charAt(i)));
+				} else
+					myAr.add(ss.charAt(i));
+			}
+		}
+		return myAr.toString().replaceAll("[\\W]", "");
+	}
+	
+	// --------------------------------------------------------------------------------
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
